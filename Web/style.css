@@ -1,0 +1,231 @@
+*{
+ -webkit-tap-highlight-color:transparent!important;
+ tap-highlight-color:transparent!important;
+ outline:0!important;
+ box-sizing:border-box;}
+
+body{
+ background:#060606;
+ color:#eee;
+ padding:0px;
+ margin:0px;
+ font-family:"Electrolize", sans-serif;}
+
+button,input,a{
+ font-family:inherit;
+ background:transparent;
+ text-decoration:none;
+ color:#eee;
+ border:none;
+ border-radius:2px;}
+ 
+.myNav{
+ display:flex;
+ justify-content:space-between;
+ padding:0px;
+ margin:0px;
+ height:50px;
+ width:100%;
+ background:rgba(9,9,9,0.5);
+ backdrop-filter:blur(6px);
+ border-bottom:0.5px solid #eee;
+ border-radius:0px 0px 2px 2px;
+ position:fixed;
+ top:0px;
+ left:0px;
+ z-index:99;
+}
+ 
+.myBrand{
+ display:block;
+ padding:0px;
+ margin:14px 0px auto 12px;
+ font-family:"Audiowide", sans-serif;
+ font-size:20px;
+ font-weight:450;
+ color:#eee;
+ width:max-content;
+}
+
+.boxMenu{
+ display:flex;
+ justify-content:flex-start;
+ gap:8px;
+ padding:0px;
+ margin:auto 12px auto auto;
+}
+
+.btnMenu{
+ display:block;
+ padding:0px;
+ margin:0px;
+ height:32px;
+ width:32px;
+ border-radius:2px;
+ border:0.5px solid #333;
+}
+
+.iconMenu{
+ display:block;
+ padding:0px;
+ margin:0px;
+ font-size: 24px !important;
+ font-weight:400 !important;
+ position:relative;
+ top:5.5px;
+ left:5.5px;
+}
+
+/** CONTENT **/
+
+.titlePage{
+ display:block;
+ padding:4px 0px;
+ margin:0px;
+ font-size:16px;
+ font-weight:800;
+ border-bottom:2px solid #eee;
+}
+
+.myLink{
+ color:#daa520;
+ font-style:italic;
+ text-decoration:0.7px underline;
+}
+
+.myContainer{
+ display:block;
+ padding:0px;
+ margin:65px auto 25px auto;
+ width:90%;
+}
+
+.myTitle{
+ display:block;
+ padding:0px;
+ margin:15px 0px 0px 0px;
+ font-size:14px;
+ font-weight:800;
+}
+
+.subTitle{
+ display:block;
+ padding:0px;
+ margin:0px;
+ font-size:13px;
+ font-weight:600;
+}
+
+.textTitle {
+ display: block;
+ padding: 0px;
+ margin: 0px;
+ font-size: 13px;
+ font-weight: 550;
+ color:#dfdfdf;
+}
+
+.myText{
+ display:block;
+ padding:0px;
+ margin:4px 0px 0px 0px;
+ font-size:13px;
+ font-weight:500;
+ color:#dfdfdf;
+}
+
+.spacer-ss{
+ display:block;
+ padding:0px;
+ margin:8px 0px;
+}
+
+.counterList {
+ counter-reset: item-counter;
+ margin: 0;
+ padding: 0;
+}
+
+.counterItem {
+ display:block;
+ padding:0px 0px 0px 12px;
+ margin:4px 0px 0px 0px;
+ font-size:13px;
+ font-weight:500;
+ color:#dfdfdf;
+ position: relative;
+ counter-increment: item-counter;
+}
+
+.counterItem::before {
+ content: counter(item-counter) ".";
+ position: absolute;
+ left: 0;
+ top: 0;
+ font-size:13px;
+ font-weight: 500;
+ color: #dfdfdf;
+}
+
+.simpleList {
+ margin: 4px 0px 0px 0px;
+ padding: 0;
+ list-style: none;
+}
+
+.simpleList .listItem {
+ margin: 0;
+ padding: 0 0 0 8px;
+ font-size: 13px;
+ font-weight: 400;
+ color: #dfdfdf;
+ position: relative;
+}
+
+.simpleList:not(.numbered) .listItem::before {
+ content: "•";
+ position: absolute;
+ left: 0px;
+ top: 2px;
+ font-size: 11px;
+ font-weight: 550;
+ color: #dfdfdf;
+}
+
+.simpleList.numbered {
+ counter-reset: listCounter;
+ list-style: none;
+}
+
+.simpleList.numbered .listItem {
+ counter-increment: listCounter;
+ padding-left: 11px;
+}
+
+.simpleList.numbered .listItem::before {
+ content: counter(listCounter) ".";
+ position: absolute;
+ left: 0px;
+ top: 0;
+ font-size: 13px;
+ font-weight: 550;
+ color: #dfdfdf;
+}
+
+.xFormula{
+ font-size:12.5px;
+ font-weight:100;
+ color:#0ef;
+ text-shadow:0px 0px 2px #0ef;
+ display:block;
+ padding:2px 0px;
+ margin:0px;
+ text-align:center;
+ width:100%;
+ height:max-content;
+ box-sizing:border-box;
+ white-space:nowrap;
+ box-sizing:border-box;
+ overflow-y: hidden;
+ overflow-x:auto;
+ min-height:max-content;}
