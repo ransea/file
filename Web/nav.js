@@ -11,9 +11,9 @@ function buildNavigation() {
   boxMenu.className = 'boxMenu';
   
   const menuItems = [
-    { icon: 'book_5', href: '/Web/Doc/index.html' },
-    { icon: 'dashboard', href: '/Web/Home/index.html' },
-    { icon: 'volunteer_activism', href: '/Web/Pengembangan/index.html' }
+    { icon: 'book_5', href: 'https://www.ransea.online/2026/03/Doc.html' },
+    { icon: 'dashboard', href: 'https://www.ransea.online/2026/03/Beranda.html' },
+    { icon: 'volunteer_activism', href: 'https://www.ransea.online/2026/03/Dukungan.html' }
   ];
   
   menuItems.forEach(item => {
