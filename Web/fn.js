@@ -13,15 +13,14 @@ function loadGoogleFonts() {
  
  const fontLink = document.createElement('link');
  fontLink.rel = 'stylesheet';
- fontLink.href = 'https://fonts.googleapis.com/css2?family=Audiowide&family=Monda:wght@400..700&family=Play:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap';
+ fontLink.href = 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Audiowide&family=Beau+Rivage&family=Electrolize&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monda:wght@400..700&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Fira+Code:wght@300..700&display=swap';
  document.head.appendChild(fontLink);
+ 
  
  const iconLink = document.createElement('link');
  iconLink.rel = 'stylesheet';
  iconLink.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined';
  document.head.appendChild(iconLink);
- 
- console.log('Google Fonts dan Material Symbols berhasil dimuat!');
 }
 
 document.addEventListener('DOMContentLoaded', loadGoogleFonts);
@@ -40,9 +39,9 @@ function buildNavigation() {
  boxMenu.className = 'boxMenu';
  
  const menuItems = [
-  { icon: 'book_5', href: '/p/doc.html' },
-  { icon: 'dashboard', href: 'p/beranda.html' },
-  { icon: 'volunteer_activism', href: '/p/dukungan.html' }
+  { icon: 'book_5', href: 'https://www.ransea.online/2026/03/Doc.html' },
+  { icon: 'dashboard', href: 'https://www.ransea.online/2026/03/Beranda.html' },
+  { icon: 'volunteer_activism', href: 'https://www.ransea.online/2026/03/Dukungan.html' }
  ];
  
  menuItems.forEach(item => {
@@ -81,10 +80,9 @@ function loadMathJax() {
  script.async = true;
  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
  document.head.appendChild(script);
- console.log('MathJax berhasil dimuat!');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
  loadGoogleFonts();
  loadMathJax();
-}); 
+});
