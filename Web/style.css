@@ -68,7 +68,7 @@ button,input,a{
  font-size: 19.5px !important;
  font-weight:300 !important;
  position:relative;
- top:4.5px;
+ top:4.8px;
  left:4.8px;
  color:#dfdfdf;}
 
@@ -93,14 +93,14 @@ button,input,a{
 .myTitle{
  display:block;
  padding:0px;
- margin:0px 0px 2px 0px;
+ margin:0px 0px 3px 0px;
  font-size:12px;
  font-weight:600;}
 
 .subTitle{
  display:block;
  padding:0px;
- margin:0px 0px 1px 0px;
+ margin:0px 0px 2.5px 0px;
  font-size:11.5px;
  font-weight:500;}
 
@@ -108,15 +108,15 @@ button,input,a{
  display:block;
  padding:0px;
  margin:1px 2px;
- font-size:11.4px;
+ font-size:11.3px;
  font-weight:400;
- color:#e5e5e5;
- line-height:14.5px;}
+ color:#e9e9e9;
+ line-height:14.3px;}
 
 .spacer-ss{
  display:block;
  padding:0px;
- margin:5px 0px;}
+ margin:4px 0px;}
 
 .spacer-sm{
  display:block;
@@ -134,7 +134,7 @@ button,input,a{
  margin: 4px 0px 0px 0px;
  font-size: 12px;
  font-weight: 500;
- color: #dfdfdf;
+ color: #e9e9e9;
  position: relative;
  counter-increment: item-counter;}
 
@@ -145,29 +145,29 @@ button,input,a{
  top: 0;
  font-size: 12px;
  font-weight: 400;
- color: #dfdfdf;}
+ color: #e9e9e9;}
 
 .myList {
  margin: 2px 0px 0px 0px;
  padding: 0;
- line-height:14.5px;
+ line-height:14.3px;
  list-style: none;}
 
 .myList .listItem {
  margin: 0;
  padding: 0 0 0 8px;
- font-size: 11.4px;
+ font-size: 11.3px;
  font-weight: 400;
- color: #dfdfdf;
+ color: #e9e9e9;
  position: relative;}
 
 .myList:not(.numbered) .listItem::before {
  content: "•";
  position: absolute;
  left: 0px;
- font-size: 8px;
+ font-size: 7.8px;
  font-weight: 300;
- color: #dfdfdf;}
+ color: #e9e9e9;}
 
 .myList.numbered {
  counter-reset: listCounter;
@@ -175,19 +175,19 @@ button,input,a{
 
 .myList.numbered .listItem {
  counter-increment: listCounter;
- padding-left: 15px;}
+ padding-left: 17px;}
 
 .myList.numbered .listItem::before {
  content: counter(listCounter) ".";
  position: absolute;
- left: 0px;
+ left: 1px;
  top: 0;
- font-size: 11px;
+ font-size: 11.3px;
  font-weight: 400;
- color: #dfdfdf;}
+ color: #e9e9e9;}
 
 .xFormula{
- font-size:11.7px;
+ font-size:11.8px;
  font-weight:500;
  color:#daa520;
  text-shadow:0px 0px 0.8px darkgoldenrod;
