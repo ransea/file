@@ -175,7 +175,7 @@ button,input,a{
 
 .myList.numbered .listItem {
  counter-increment: listCounter;
- padding-left: 12px;}
+ padding-left: 15px;}
 
 .myList.numbered .listItem::before {
  content: counter(listCounter) ".";
