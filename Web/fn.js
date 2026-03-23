@@ -86,3 +86,20 @@ document.addEventListener('DOMContentLoaded', () => {
  loadGoogleFonts();
  loadMathJax();
 });
+
+function wrapXFormula() {
+  const formulas = document.querySelectorAll('.xFormula');
+  formulas.forEach(el => {
+    let rawContent = el.textContent.trim();
+    if (rawContent) {
+      el.textContent = `$$${rawContent}$$`;
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  wrapXFormula();
+  if (window.MathJax) {
+    MathJax.typesetPromise();
+  }
+});
