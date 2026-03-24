@@ -39,9 +39,9 @@ function buildNavigation() {
  boxMenu.className = 'boxMenu';
  
  const menuItems = [
-  { icon: 'book_5', href: 'https://www.ransea.online/2026/03/Doc.html' },
-  { icon: 'dashboard', href: 'https://www.ransea.online/2026/03/Beranda.html' },
-  { icon: 'volunteer_activism', href: 'https://www.ransea.online/2026/03/Dukungan.html' }
+  { icon: 'book_5', href: '/p/doc.html' },
+  { icon: 'dashboard', href: '/p/Beranda.html' },
+  { icon: 'volunteer_activism', href: '/p/pengembangan.html' }
  ];
  
  menuItems.forEach(item => {
@@ -88,18 +88,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function wrapXFormula() {
-  const formulas = document.querySelectorAll('.xFormula');
-  formulas.forEach(el => {
-    let rawContent = el.textContent.trim();
-    if (rawContent) {
-      el.textContent = `$$${rawContent}$$`;
-    }
-  });
+ const formulas = document.querySelectorAll('.xFormula');
+ formulas.forEach(el => {
+  let rawContent = el.textContent.trim();
+  if (rawContent) {
+   el.textContent = `$$${rawContent}$$`;
+  }
+ });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  wrapXFormula();
-  if (window.MathJax) {
-    MathJax.typesetPromise();
-  }
+ wrapXFormula();
+ if (window.MathJax) {
+  MathJax.typesetPromise();
+ }
 });
