@@ -116,12 +116,12 @@ button,input,a{
 .spacer-ss{
  display:block;
  padding:0px;
- margin:4px 0px;}
+ margin:6px 0px;}
 
 .spacer-sm{
  display:block;
  padding:0px;
- margin:8px 0px;}
+ margin:10px 0px;}
 
 .counterList {
  counter-reset: item-counter;
