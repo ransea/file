@@ -40,7 +40,7 @@ function buildNavigation() {
  
  const menuItems = [
   { icon: 'book_5', href: '/p/doc.html' },
-  { icon: 'dashboard', href: '/p/beranda.html' },
+  { icon: 'dashboard', href: '/p/Beranda.html' },
   { icon: 'volunteer_activism', href: '/p/pengembangan.html' }
  ];
  
