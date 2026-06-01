@@ -1,0 +1,117 @@
+[
+  {
+    "title": ["Alat Masak", "Cooking Utensils"],
+    "icon": "flatware",
+    "path": "alat_masak"
+  },
+  {
+    "title": ["Angka Cardinal", "Cardinal Numbers"],
+    "icon": "123",
+    "path": "angka_cardinal"
+  },
+  {
+    "title": ["Angka Ordinal", "Ordinal Number"],
+    "icon": "pin",
+    "path": "angka_ordinal"
+  },
+  {
+    "title": ["Bagian Rumah", "House Parts"],
+    "icon": "accessibility_new",
+    "path": "bagian_rumah"
+  },
+  {
+    "title": ["Desimal", "Decimal"],
+    "icon": "speed_1_5",
+    "path": "desimal"
+  },
+  {
+    "title": ["Kata Kerja", "Verbs"],
+    "icon": "language_international",
+    "path": "kata_kerja"
+  },
+  {
+   "title": ["Keluarga", "Family"],
+   "icon": "family_restroom",
+   "path": "keluarga"
+  },
+  {
+  "title": ["Makanan", "Food"],
+  "icon": "egg_alt",
+  "path": "makanan"
+  },
+  {
+    "title": ["Minuman", "Drinks"],
+    "icon": "coffee",
+    "path": "desimal"
+  },
+  {
+    "title": ["Nama Buah", "Fruit Names"],
+    "icon": "nutrition",
+    "path": "minuman"
+  },
+  {
+    "title": ["Nama Hewan", "Animal Names"],
+    "icon": "chess_knight",
+    "path": "nama_hewan"
+  },
+  {
+    "title": ["Nilai Uang", "Money Value"],
+    "icon": "payments",
+    "path": "nilai_uang"
+  },
+  {
+    "title": ["Pakaian", "Clothing"],
+    "icon": "Apparel",
+    "path": "pakaian"
+  },
+  {
+    "title": ["Parabotan Rumah", "Furniture"],
+    "icon": "chair",
+    "path": "parabotan_rumah"
+  },
+  {
+    "title": ["Pecahan", "Fractions"],
+    "icon": "decimal_increase",
+    "path": "pecahan"
+  },
+  {
+    "title": ["Pekerjaan", "Occupations"],
+    "icon": "engineering",
+    "path": "pekerjaan"
+  },
+  {
+    "title": ["Pengukuran", "Measurement"],
+    "icon": "balance",
+    "path": "pengukuran"
+  },
+  {
+    "title": ["Persentase", "Percentage"],
+    "icon": "percent",
+    "path": "persentase"
+  },
+  {
+    "title": ["Sayuran", "Vegetables"],
+    "icon": "psychiatry",
+    "path": "sayuran"
+  },
+  {
+    "title": ["Tahun", "Year"],
+    "icon": "date_range",
+    "path": "tahun"
+  },
+  {
+    "title": ["Tempat Umum", "Public Places"],
+    "icon": "apartment",
+    "path": "tempat_umum"
+  },
+  {
+    "title": ["Transportasi", "Transportation"],
+    "icon": "local_shipping",
+    "path": "transportasi"
+  },
+  {
+    "title": ["Warna", "Colors"],
+    "icon": "palette",
+    "path": "warna"
+  }
+]
