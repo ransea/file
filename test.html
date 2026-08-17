@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Uncial+Antiqua&display=swap">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  
+  </script>
+  <link rel="stylesheet" href="style.css">
+
+ <title></title>
+</head>
+
+<body>
+
+<div class="lesson">
+ <h2 class="lesson-title">📘 Logaritma (Definisi, Sifat-sifat, Perubahan Basis)</h2>
+ <div class="lesson-section">
+  <h3 class="lesson-section-heading">A. Apa Itu Logaritma?</h3>
+<span class="lesson-text">Logaritma adalah <strong>kebalikan (invers) dari perpangkatan (eksponen)</strong>. Jika eksponen menjawab pertanyaan <em>"Berapakah hasil dari \(2^3\)?"</em> (jawabannya 8), maka logaritma menjawab pertanyaan sebaliknya: <em>"2 pangkat berapa agar hasilnya 8?"</em> Jawabannya adalah 3.</span>
+
+<span class="lesson-text"><strong>Definisi formal</strong>:</span>
+<span class="lesson-text">Jika \(a^c = b\), maka bentuk logaritmanya adalah:</span>
+<span class="lesson-text">\(\log_{a} b = c\)</span>
+
+<span class="lesson-text">Dengan keterangan:</span>
+<ul>
+ <li>\(a\) disebut <strong>Basis</strong> (angka pokok).</li>
+ <li>\(b\) disebut <strong>Numerus</strong> (angka yang dicari logaritmanya).</li>
+ <li>\(c\) disebut <strong>Hasil logaritma</strong> (pangkat yang dicari).</li>
+</ul>
+
+<span class="lesson-text"><strong>Contoh langsung agar melekat:</strong></span>
+<ul>
+ <li>Karena \(2^3 = 8\), maka \(\log_{2} 8 = 3\) (dibaca: "logaritma basis 2 dari 8 adalah 3").</li>
+ <li>Karena \(5^2 = 25\), maka \(\log_{5} 25 = 2\).</li>
+ <li>Karena \(10^4 = 10.000\), maka \(\log_{10} 10.000 = 4\).</li>
+</ul>
+ </div>
+
+ <div class="lesson-section">
+  <h3 class="lesson-section-heading">B. Syarat Logaritma (Jangan Sampai Salah!)</h3>
+  <span class="lesson-text">Logaritma memiliki aturan ketat agar nilainya "sah" (terdefinisi) di dunia bilangan riil:</span>
+<ol>
+ <li><strong>Basis (\(a\)) harus positif dan tidak sama dengan 1</strong> → \(a > 0\) dan \(a \neq 1\).
+  <ul>
+   <li>Mengapa \(a\) tidak boleh negatif? Karena hasil pangkatnya akan bolak-balik (tidak konsisten).</li>
+   <li>Mengapa \(a\) tidak boleh 1? Karena \(1^c\) selalu 1 untuk semua nilai \(c\), jadi tidak unik.</li>
+  </ul>
+ </li>
+ <li><strong>Numerus (\(b\)) harus positif</strong> → \(b > 0\).
+  <ul>
+   <li>Mengapa? Karena tidak ada bilangan riil \(c\) yang memenuhi \(a^c\) menghasilkan angka negatif (jika \(a > 0\)).</li>
+  </ul>
+ </li>
+</ol>
+
+<p class="lesson-subheading-alt">Contoh logaritma yang SAH:</p>
+<ul>
+ <li>\(\log_{2} 8\) (basis \(2 > 0\) dan \(\neq 1\), numerus \(8 > 0\)) → SAH.</li>
+ <li>\(\log_{10} 0.001\) (basis 10, numerus positif) → SAH.</li>
+</ul>
+
+<p class="lesson-subheading-alt">Contoh logaritma yang TIDAK SAH (di dunia riil):</p>
+<ul>
+ <li>\(\log_{-2} 8\) → basis negatif, <strong>TIDAK SAH</strong>.</li>
+ <li>\(\log_{2} 0\) → numerus 0, <strong>TIDAK SAH</strong>.</li>
+ <li>\(\log_{2} (-4)\) → numerus negatif, <strong>TIDAK SAH</strong>.</li>
+</ul>
+
+ </div>
+
+ <div class="lesson-section">
+  <h3 class="lesson-section-heading">C. Dua "Bintang" Logaritma yang Sering Dipakai</h3>
+  <span class="lesson-text">Di luar matematika murni, ada dua basis logaritma yang sangat populer dan punya simbol khusus:</span>
+<table>
+ <tr>
+  <th>Nama</th>
+  <th>Basis</th>
+  <th>Simbol</th>
+  <th>Contoh Penggunaan</th>
+ </tr>
+ <tr>
+  <td style="font-weight:bold">Logaritma Biasa (Common Log)</td>
+  <td>10</td>
+  <td>\(\log\) atau \(\log_{10}\)</td>
+  <td>Skala pH, Skala Richter, dan pengukuran desibel. Biasanya di kalkulator tertulis "log".</td>
+ </tr>
+ <tr>
+  <td style="font-weight:bold">Logaritma Natural (Natural Log)</td>
+  <td>\(e \approx 2.718\)</td>
+  <td>\(\ln\)</td>
+  <td>Peluruhan radioaktif, pertumbuhan populasi, dan semua rumus kalkulus lanjutan.</td>
+ </tr>
+</table>
+
+<div class="lesson-note">
+ <span class="lesson-text"><strong>Catatan</strong>: Di beberapa buku pelajaran SMA di Indonesia, kamu mungkin menemukan notasi \({}^{a}\log b\). Namun, di dunia sains dan kalkulator, notasi \(\log_{a} b\) jauh lebih umum. Di halaman ini kita pakai \(\log_{a} b\) agar konsisten dengan referensi global.</span>
+</div>
+ </div>
+
+ <div class="lesson-section">
+  <h3 class="lesson-section-heading">D. Sifat-Sifat Logaritma (Wajib Hafal dan Paham!)</h3>
+  <span class="lesson-text">Sifat-sifat di bawah ini adalah "kunci" untuk menyelesaikan semua soal logaritma, mulai dari yang sederhana hingga yang rumit. Pelajari tabel ini dengan seksama:</span>
+  <div class="overspace">
+   <table>
+ <tr>
+  <th>Sifat</th>
+  <th>Rumus</th>
+  <th>Contoh Nyata</th>
+ </tr>
+ <tr>
+  <td style="font-weight:bold">Logaritma dari 1</td>
+  <td>\(\log_{a} 1 = 0\)</td>
+  <td>\(\log_{5} 1 = 0\), karena \(5^0 = 1\).</td>
+ </tr>
+ <tr>
+  <td style="font-weight:bold">Logaritma dari basis itu sendiri</td>
+  <td>\(\log_{a} a = 1\)</td>
+  <td>\(\log_{7} 7 = 1\), karena \(7^1 = 7\).</td>
+ </tr>
+ <tr>
+  <td style="font-weight:bold">Perkalian menjadi Penjumlahan</td>
+  <td>\(\log_{a} (b \times c) = \log_{a} b + \log_{a} c\)</td>
+  <td>\(\log_{2} (8 \times 4) = \log_{2} 8 + \log_{2} 4 = 3 + 2 = 5\). Cek: \(2^5 = 32\), dan \(8 \times 4 = 32\). Terbukti!</td>
+ </tr>
+ <tr>
+  <td style="font-weight:bold">Pembagian menjadi Pengurangan</td>
+  <td>\(\log_{a} \left( \frac{b}{c} \right) = \log_{a} b - \log_{a} c\)</td>
+  <td>\(\log_{3} \left( \frac{81}{9} \right) = \log_{3} 81 - \log_{3} 9 = 4 - 2 = 2\). Cek: \(3^2 = 9\), dan \(81/9 = 9\). Terbukti!</td>
+ </tr>
+ <tr>
+  <td style="font-weight:bold">Pangkat pada Numerus</td>
+  <td>\(\log_{a} (b^n) = n \times \log_{a} b\)</td>
+  <td>\(\log_{2} (8^2) = \log_{2} 64 = 6\). Sementara \(2 \times \log_{2} 8 = 2 \times 3 = 6\). (Sama!)</td>
+ </tr>
+ <tr>
+  <td style="font-weight:bold">Pangkat pada Basis</td>
+  <td>\(\log_{a^n} b = \frac{1}{n} \times \log_{a} b\)</td>
+  <td>\(\log_{4} 64 = 3\). Sementara \(\log_{2^2} 64 = \frac{1}{2} \log_{2} 64 = \frac{1}{2} \times 6 = 3\).</td>
+ </tr>
+ <tr>
+  <td style="font-weight:bold">Eksponen berbasis logaritma</td>
+  <td>\(a^{\log_{a} b} = b\)</td>
+  <td>\(2^{\log_{2} 8} = 2^3 = 8\). (Sifat ini sering dipakai untuk mencabut logaritma!)</td>
+ </tr>
+</table>
+  </div>
+ </div>
+
+ <div class="lesson-section">
+  <h3 class="lesson-section-heading">E. Perubahan Basis (Teknik Super Penting)</h3>
+  <span class="lesson-text">Apa gunanya mengubah basis logaritma? Karena kalkulator hanya memiliki tombol "log" (basis 10) dan "ln" (basis \(e\)). Untuk menghitung \(\log_{2} 100\), kalkulator tidak bisa langsung, sehingga kita harus <strong>mengubah basisnya</strong> ke 10 atau \(e\).</span>
+
+<span class="lesson-text"><strong>Rumus ajaib perubahan basis</strong>:</span>
+<span class="lesson-text">\(\log_{a} b = \frac{\log_{c} b}{\log_{c} a}\)</span>
+
+<span class="lesson-text">Keterangan: \(a\) adalah basis lama, \(b\) adalah numerus, dan \(c\) adalah basis baru yang kita pilih (biasanya 10 atau \(e\)).</span>
+
+<span class="lesson-text"><strong>Kasus khusus yang sering muncul (akibat rumus di atas):</strong></span>
+<span class="lesson-text">\(\log_{a} b = \frac{1}{\log_{b} a}\)</span>
+
+<span class="lesson-text"><strong>Contoh perubahan basis (biar langsung paham):</strong></span>
+<span class="lesson-text">Hitung \(\log_{2} 32\) menggunakan rumus perubahan basis ke basis 10:</span>
+<span class="lesson-text">\(\log_{2} 32 = \frac{\log_{10} 32}{\log_{10} 2} = \frac{1.505}{0.301} \approx 5\)</span>
+<span class="lesson-text">(Tentu saja hasilnya 5, karena \(2^5 = 32\)).</span>
+ </div>
+
+ <div class="lesson-section">
+  <h3 class="lesson-section-heading">F. Kaitannya dengan Fisika dan Sains (Sekilas ke Depan)</h3>
+  <span class="lesson-text">Ingat, logaritma adalah alat universal yang dipakai di berbagai bidang. Namun, karena kamu mungkin tertarik pada fisika, berikut 4 contoh nyata di mana logaritma akan sangat berguna di kemudian hari:</span>
+  <ol>
+ <li><strong>Skala Desibel (Intensitas Suara)</strong>: Telinga manusia mendengar suara dalam rentang yang sangat luas. Untuk memudahkan, para fisikawan menggunakan skala logaritmik (dB). Rumusnya \(\beta = 10 \log_{10} \left( \frac{I}{I_0} \right)\). Di sini kamu akan memakai \(\log_{10}\).</li>
+ <li><strong>Skala Richter (Gempa Bumi)</strong>: Kekuatan gempa dihitung menggunakan logaritma basis 10. Gempa dengan magnitudo 6 memiliki energi 10 kali lebih besar dari magnitudo 5.</li>
+ <li><strong>Skala pH (Keasaman)</strong>: Dalam kimia (dan fisika materi), tingkat keasaman dihitung dengan \(\text{pH} = -\log_{10} [H^+]\). Tanda negatif di depan logaritma sering kali membingungkan, tapi dengan memahami sifat-sifat logaritma, kamu akan mudah mengatasinya.</li>
+ <li><strong>Peluruhan Radioaktif (Mencari Waktu)</strong>: Jika zat radioaktif meluruh dengan rumus \(N(t) = N_0 e^{-kt}\), untuk mencari waktu \(t\) ketika zat tersisa setengahnya, kamu harus menggunakan <strong>logaritma natural</strong> (\(\ln\)) untuk "menurunkan" pangkat \(e\).</li>
+</ol>
+ </div>
+
+ <div class="lesson-section">
+  <h3 class="lesson-section-heading">G. Contoh Soal dan Pembahasan (Langkah Demi Langkah)</h3>
+  <p class="lesson-subheading">Soal 1 (Logaritma Dasar):</p>
+  <span class="lesson-text">Tentukan nilai dari \(\log_{3} 81\).</span>
+<span class="lesson-text"><strong>Pembahasan</strong>:</span>
+<span class="lesson-text">Kita cari \(c\) yang memenuhi \(3^c = 81\).</span>
+<span class="lesson-text">Karena \(81 = 3^4\), maka \(3^c = 3^4\), sehingga \(c = 4\).</span>
+<span class="lesson-text"><strong>Jawaban Akhir:</strong> 4</span>
+
+<p class="lesson-subheading">Soal 2 (Menggunakan Sifat Perkalian/Pembagian):</p>
+<span class="lesson-text">Sederhanakan bentuk \(\log_{5} 50 - \log_{5} 2\).</span>
+<span class="lesson-text"><strong>Pembahasan:</strong></span>
+<span class="lesson-text">Karena basisnya sama (sama-sama 5), kita bisa gunakan sifat pembagian (pengurangan log = pembagian numerus):</span>
+<span class="lesson-text">\(\log_{5} 50 - \log_{5} 2 = \log_{5} \left( \frac{50}{2} \right) = \log_{5} 25\)</span>
+<span class="lesson-text">Karena \(5^2 = 25\), maka \(\log_{5} 25 = 2\).</span>
+<span class="lesson-text"><strong>Jawaban Akhir:</strong> 2</span>
+
+<p class="lesson-subheading">Soal 3 (Menggunakan Sifat Pangkat):</p>
+<span class="lesson-text">Hitunglah nilai dari \(2 \log_{4} 8 + \log_{4} 2\).</span>
+<span class="lesson-text"><strong>Pembahasan:</strong></span>
+<ul>
+ <li>Bagian pertama: \(2 \log_{4} 8 = \log_{4} (8^2) = \log_{4} 64\).</li>
+ <li>Sekarang bentuknya menjadi: \(\log_{4} 64 + \log_{4} 2\).</li>
+ <li>Karena basis sama (4), kita jumlahkan (perkalian numerus):<br>\(\log_{4} (64 \times 2) = \log_{4} 128\)</li>
+ <li>\(128 = 4^{3.5}\) agak rumit. Kita ubah basisnya:<br>\(\log_{4} 128 = \log_{4} (2^7)\). Karena \(4 = 2^2\), maka \(\log_{2^2} 2^7 = \frac{7}{2} \times \log_{2} 2 = \frac{7}{2}\).<br><strong>Jawaban Akhir:</strong> \(\frac{7}{2}\) <strong>Atau</strong> \(3.5\)</li>
+</ul>
+
+<p class="lesson-subheading">Soal 4 (Perubahan Basis):</p>
+<span class="lesson-text">Jika \(\log_{2} 3 = p\) dan \(\log_{3} 5 = q\), nyatakan \(\log_{4} 15\) dalam \(p\) dan \(q\)!</span>
+<span class="lesson-text"><strong>Pembahasan:</strong></span>
+<ul>
+ <li>Kita ubah \(\log_{4} 15\) ke basis 3 (karena \(p\) dan \(q\) berhubungan dengan basis 2 dan 3).</li>
+ <li>\(\log_{4} 15 = \frac{\log_{3} 15}{\log_{3} 4}\).</li>
+ <li>Uraikan \(\log_{3} 15 = \log_{3} (3 \times 5) = \log_{3} 3 + \log_{3} 5 = 1 + q\).</li>
+ <li>Uraikan \(\log_{3} 4 = \log_{3} (2^2) = 2 \log_{3} 2\). Kita tahu \(\log_{2} 3 = p\), maka \(\log_{3} 2 = \frac{1}{p}\). Jadi \(\log_{3} 4 = 2 \times \frac{1}{p} = \frac{2}{p}\).</li>
+ <li>Masukkan ke bentuk awal:<br>\(\log_{4} 15 = \frac{1 + q}{\frac{2}{p}} = \frac{p(1+q)}{2}\)<br><strong>Jawaban Akhir</strong>: \(\frac{p(1+q)}{2}\)</li>
+</ul>
+ </div>
+
+<div class="lesson-section">
+ <h3 class="lesson-section-heading">H. Rangkuman Akhir</h3>
+ <ol>
+  <li><strong>Definisi</strong>: \(\log_{a} b = c \iff a^c = b\). Ini adalah invers dari eksponen.</li>
+  <li><strong>Syarat</strong>: Basis \(a > 0\) dan \(a \neq 1\). Numerus \(b > 0\).</li>
+  <li><strong>3 Sifat Paling Sering Dipakai</strong>:
+   <ul>
+    <li>Perkalian → Penjumlahan: \(\log_{a} (bc) = \log_{a} b + \log_{a} c\).</li>
+    <li>Pembagian → Pengurangan: \(\log_{a} \left( \frac{b}{c} \right) = \log_{a} b - \log_{a} c\).</li>
+    <li>Pangkat → Perkalian: \(\log_{a} (b^n) = n \log_{a} b\).</li>
+   </ul>
+  </li>
+  <li><strong>Perubahan Basis</strong>: \(\log_{a} b = \frac{\log_{c} b}{\log_{c} a}\). Sangat berguna untuk menghitung dengan kalkulator.</li>
+ </ol>
+</div>
+
+<div class="lesson-section">
+ <h3 class="lesson-section-heading">✍️ Latihan Mandiri</h3>
+ <ol>
+  <li>Tentukan nilai dari \(\log_{2} 64\).</li>
+  <li>Sederhanakan: \(\log_{7} 21 + \log_{7} 3 - \log_{7} 9\).</li>
+  <li>Hitunglah: \(3 \log_{2} 4 + \log_{2} 8\).</li>
+  <li>Jika \(\log_{3} 5 = a\), nyatakan \(\log_{9} 125\) dalam \(a\)!</li>
+ </ol>
+</div>
+
+</div>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.text-math').forEach(function(el) {
+   let content = el.innerHTML.trim();
+   if (!content.match(/^\\\(/) && !content.match(/\\\)$/)) {
+    el.innerHTML = '\\(' + content + '\\)';
+   }
+  });
+  if (window.MathJax && MathJax.typesetPromise) {
+   MathJax.typesetPromise();
+  }
+ });
+</script>
+</body>
+</html>
